@@ -1,0 +1,8 @@
+source("load.R")
+png(file="figure/plot3.png")
+plot(hpc3$datetime, hpc3$Sub_metering_1, type="n", xlab="", ylab="Energy sub metering")
+lines(hpc3$datetime, hpc3$Sub_metering_1)
+lines(hpc3$datetime, hpc3$Sub_metering_2, col="red")
+lines(hpc3$datetime, hpc3$Sub_metering_3, col="blue")
+legend("topright", lwd=1, col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+dev.off()

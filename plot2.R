@@ -1,0 +1,5 @@
+source("load.R")
+png(file="figure/plot2.png")
+plot(hpc3$datetime, hpc3$Global_active_power/1000, type="n", xlab="", ylab="Global Active Power (kilowatts)")
+lines(hpc3$datetime, hpc3$Global_active_power/1000)
+dev.off()
